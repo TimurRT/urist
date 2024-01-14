@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  .pricing-header {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+      margin-top: 80px;
+  }
+
+  p {
+    width: 140%;
+    margin-bottom: 40px;
+  }
+
+  .consultation-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .consultation-button:hover {
+    background-color: #45a049;
+  }
+</style>
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Юридические услуги для бизнеса</h1>
+  <p class="lead">Команда профессиональных юристов поможет Вам в решении правовых проблем любой сложности</p>
+</div>
+
+{% endblock content %}

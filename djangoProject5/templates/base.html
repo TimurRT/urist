@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% block title %}Юридические услуги{% endblock %}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Your common CSS files or styles can go here -->
+
+    {% include 'snippets/header.html' %}
+
+</head>
+
+<body>
+
+    <style type="text/css">
+        .main {
+            min-height: 100vh;
+            height: 100%;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+    <div class="main">
+        <div class="nav-container">
+            {% block content %}{% endblock content %}
+        </div>
+    </div>
+
+    <!-- Your common JavaScript files or scripts can go here -->
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  .services-container {
+    text-align: center;
+    margin-top: 90px;
+  }
+
+    h3 {
+    font-size: 16px; /* Размер шрифта h1 */
+    font-weight: normal; /* Нормальное начертание (не жирное) */
+    margin-bottom: 5px; /* Расстояние между h1 и следующим элементом */
+  }
+
+  .service-item {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<div class="container">
+  <div class="services-container">
+    <h1>Наши Услуги</h1>
+    <div class="service-item">
+      <h3>Защита интересов в арбитражном суде</h3>
+    </div>
+    <div class="service-item">
+      <h3>Защита интересов в государственных органах</h3>
+    </div>
+    <div class="service-item">
+      <h3>Антимонопольные споры</h3>
+    </div>
+      <div class="service-item">
+      <h3>Налоговые споры</h3>
+    </div>
+    <div class="service-item">
+      <h3>Недвижимость и строительство</h3>
+    </div>
+    <div class="service-item">
+      <h3>Правовое сопровождение деятельности компании</h3>
+    </div>
+        <div class="service-item">
+      <h3>Договорная работа</h3>
+    </div>
+    <div class="service-item">
+      <h3>Взыскание долгов</h3>
+    </div>
+    <div class="service-item">
+      <h3>Исполнительное производство</h3>
+    </div>
+    <!-- Добавьте остальные услуги аналогичным образом -->
+  </div>
+</div>
+
+{% endblock content %}

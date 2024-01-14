@@ -1,0 +1,258 @@
+<!-- templates/yourapp/prices.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  .price-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .price-toggler {
+    font-size: 24px;
+    text-align: center;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .price-item h3 {
+    font-size: 14px;
+    margin: 0;
+    flex: 1;
+  }
+
+  .price-description {
+    display: none;
+    overflow: hidden;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: display 0.5s ease;
+    flex: 1;
+  }
+
+  body {
+    margin-top: 70px;
+  }
+
+  .price-item:hover {
+    background-color: #e0e0e0;
+  }
+</style>
+
+<div class="container ">
+  <div class="price-item" onclick="togglePrice('price1')">
+    <h3>Устная консультация - бесплатно</h3>
+    <div id="price1" class="price-description">
+ <ul>
+        <li>расчетное время не более 30 минут</li>
+        <li>тезисное выяснение обстоятельств</li>
+        <li>предварительные выводы по правовым вопросам</li>
+        <li>предварительная оценка перспектив судебного дела</li>
+        <li>выбор способа защиты нарушенного права</li>
+        <li>предварительное определение стоимости услуг</li>
+    </ul>
+    </div>
+    <div id="price1-toggler" class="price-toggler">+</div>
+  </div>
+
+  <div class="price-item" onclick="togglePrice('price2')">
+    <h3>Письменная консультация – от 2 500 руб.</h3>
+    <div id="price2" class="price-description">
+       <ul>
+        <li>расчетное время от 2 до 4 календарных дней</li>
+        <li>тезисное выяснение обстоятельств</li>
+        <li>предварительные выводы по правовым вопросам</li>
+        <li>предварительная оценка перспектив судебного дела</li>
+        <li>выбор способа защиты нарушенного права</li>
+        <li>предварительное определение стоимости услуг</li>
+    </ul>
+    </div>
+    <div id="price2-toggler" class="price-toggler">+</div>
+  </div>
+
+      <div class="price-item" onclick="togglePrice('price3')">
+    <h3>Письменная консультация – от 2 500 руб.</h3>
+    <div id="price3" class="price-description">
+       <ul>
+        <li>расчетное время от 2 до 4 календарных дней</li>
+        <li>выяснение существенных обстоятельств</li>
+        <li>предварительные выводы по правовым вопросам</li>
+        <li>оценка перспектив судебного дела</li>
+        <li>выбор способа защиты нарушенного права</li>
+    </ul>
+    </div>
+    <div id="price3-toggler" class="price-toggler">+</div>
+  </div>
+
+    <div class="price-item" onclick="togglePrice('price4')">
+    <h3>Досудебное урегулирование - от 5 000 руб</h3>
+    <div id="price4" class="price-description">
+       <ul>
+        <li>расчетное время от 2 до 5 календарных дней</li>
+        <li>выяснение существенных обстоятельств</li>
+        <li>изучение материалов по делу</li>
+        <li>выбор способа защиты нарушенного права</li>
+        <li>разъяснение выбранной позиции</li>
+           <li>подготовка претензии</li>
+    </ul>
+    </div>
+    <div id="price4-toggler" class="price-toggler">+</div>
+  </div>
+
+        <div class="price-item" onclick="togglePrice('price5')">
+    <h3>Исковое заявление, возражение на исковое заявление - от 5 000 руб.</h3>
+    <div id="price5" class="price-description">
+       <ul>
+        <li>расчетное время от 2 до 5 календарных дней</li>
+    </ul>
+    </div>
+    <div id="price5-toggler" class="price-toggler">+</div>
+  </div>
+
+        <div class="price-item" onclick="togglePrice('price6')">
+    <h3>Апелляционная жалоба, отзыв на апелляционную жалобу - от 5 000 руб.</h3>
+    <div id="price6" class="price-description">
+       <ul>
+        <li>расчетное время от 3 до 5 календарных дней</li>
+    </ul>
+    </div>
+    <div id="price6-toggler" class="price-toggler">+</div>
+  </div>
+
+
+           <div class="price-item" onclick="togglePrice('price7')">
+    <h3>Кассационная жалоба, отзыв на кассационную жалобу - от 5 000 руб.</h3>
+    <div id="price7" class="price-description">
+       <ul>
+        <li>расчетное время от 3 до 5 календарных дней</li>
+    </ul>
+    </div>
+    <div id="price7-toggler" class="price-toggler">+</div>
+  </div>
+
+    <div class="price-item" onclick="togglePrice('price8')">
+    <h3>Надзорная жалоба, отзыв на надзорную жалобу - от 5 000 руб.</h3>
+    <div id="price8" class="price-description">
+       <ul>
+        <li>расчетное время от 3 до 5 календарных дней</li>
+    </ul>
+    </div>
+    <div id="price8-toggler" class="price-toggler">+</div>
+  </div>
+
+
+      <div class="price-item" onclick="togglePrice('price9')">
+    <h3>Ведение дела в суде первой инстанции - от 30 000 руб.</h3>
+    <div id="price9" class="price-description">
+       <ul>
+    <li>расчетное время рассмотрения дела в суде первой инстанции: от 5 месяцев</li>
+    <li>участвуем при рассмотрении дела со стороны:истца, ответчика или третьего лица</li>
+    <li>стоимость услуг: фиксированная и не зависит от срока рассмотрения дела</li>
+           <strong>Влючает:</strong>
+               <li>составление и подача / отправка правовой документации (исковое / встречное исковые заявления, возражение / отзыв на иск, ходатайства и т.п.);</li>
+    <li>подготовка к судебному разбирательству по существу и представление интересов в суде первой инстанции.</li>
+    </ul>
+    </div>
+    <div id="price9-toggler" class="price-toggler">+</div>
+  </div>
+
+
+      <div class="price-item" onclick="togglePrice('price10')">
+    <h3>Ведение дела в суде апелляционной жалобы - от 30 000 руб.</h3>
+    <div id="price10" class="price-description">
+       <ul>
+    <li>расчетное время рассмотрения дела в суде апелляционной инстанции составляет от 2 месяцев</li>
+    <li>участвуем при рассмотрении дела со стороны истца, ответчика или третьего лица</li>
+    <li>стоимость услуг: фиксированная и не зависит от срока рассмотрения дела</li>
+           <strong>Влючает:</strong>
+               <li>составление и подача / отправка правовой документации (исковое / встречное исковые заявления, возражение / отзыв на иск, ходатайства и т.п.);</li>
+    <li>•	подготовка к судебному разбирательству по существу и представление интересов в суде апелляционной инстанции.</li>
+    </ul>
+    </div>
+    <div id="price10-toggler" class="price-toggler">+</div>
+  </div>
+
+
+      <div class="price-item" onclick="togglePrice('price11')">
+    <h3>Ведение дела в суде кассационной инстанции - от 30 000 руб.</h3>
+    <div id="price11" class="price-description">
+       <ul>
+    <li>расчетное время рассмотрения дела в суде апелляционной инстанции составляет от 2 месяцев</li>
+    <li>участвуем при рассмотрении дела со стороны истца, ответчика или третьего лица</li>
+    <li>стоимость услуг: фиксированная и не зависит от срока рассмотрения дела</li>
+           <strong>Влючает:</strong>
+               <li>составление и подача / отправка правовой документации (кассационная жалоба, отзыв на кассационную жалобу, ходатайства и т.п.);</li>
+    <li>подготовка к судебному разбирательству по существу и представление интересов в суде кассационной инстанции.</li>
+    </ul>
+    </div>
+    <div id="price11-toggler" class="price-toggler">+</div>
+  </div>
+
+
+      <div class="price-item" onclick="togglePrice('price12')">
+    <h3>Комплексное ведение дела в суде - от 80 000 руб.</h3>
+    <div id="price12" class="price-description">
+       <ul>
+    <li>участвуем при рассмотрении дела со стороны истца, ответчика или третьего лица</li>
+    <li>стоимость услуг: фиксированная и не зависит от срока рассмотрения дела</li>
+           <strong>Влючает:</strong>
+               <li>составление и подача / отправка правовой документации (исковое / встречное исковые заявления, возражение / отзыв на иск, ходатайства, апелляционная, кассационная жалобы и т.п.);</li>
+    <li>подготовка к судебному разбирательству по существу и представление интересов в суде первой инстанции.</li>
+           <li>сбор доказательств по делу;</li>
+           <li>оспаривание состоявшегося решения суда первой, апелляционной, кассационной и иных инстанций;</li>
+           <li>исполнительное производство;</li>
+           <li>иные действия правового характера.</li>
+    </ul>
+    </div>
+    <div id="price12-toggler" class="price-toggler">+</div>
+  </div>
+
+
+      <div class="price-item" onclick="togglePrice('price13')">
+    <h3>Юридическое сопровождение организаций, ИП - от 10 000 руб.</h3>
+    <div id="price13" class="price-description">
+       <ul>
+    <li>стоимость услуг зависит от выбранного тарифа</li>
+           <strong>Влючает:</strong>
+               <li>устные и письменные консультации;</li>
+    <li>составление договоров, локальных правовых актов;</li>
+           <li>правовая экспертиза договоров, локальных правовых актов;</li>
+           <li>представление интересов в государственных органах;</li>
+           <li>представление интересов в суде;</li>
+           <li>иные действия правового характера.</li>
+    </ul>
+    </div>
+    <div id="price13-toggler" class="price-toggler">+</div>
+  </div>
+
+
+
+</div>
+
+
+<script>
+  function togglePrice(id) {
+    var priceDescription = document.getElementById(id);
+    var priceToggler = document.getElementById(`${id}-toggler`);
+
+    if (priceDescription.style.display === 'none' || priceDescription.style.display === '') {
+      priceDescription.style.display = 'block';
+      priceToggler.innerHTML = '-';
+    } else {
+      priceDescription.style.display = 'none';
+      priceToggler.innerHTML = '+';
+    }
+  }
+</script>
+
+{% endblock %}

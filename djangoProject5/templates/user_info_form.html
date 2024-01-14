@@ -1,0 +1,93 @@
+<!-- templates/yourapp/user_data_form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    .form-container {
+        margin-top: 100px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        {#color: #007bff;#}
+    }
+
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        {#background-color: #007bff;#}
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        {#background-color: #0056b3;#}
+    }
+</style>
+
+<div class="form-container">
+   <h2>Отправьте запрос на бесплатную консультацию</h2>
+   <p style="text-align: center;">
+        Наш специалист свяжется с вами, чтобы уточнить дату и время встречи.
+    </p>
+
+    <form method="post" action="{% url 'user_form' %}">
+        {% csrf_token %}
+
+        {% if form.errors %}
+            <div class="error-message">
+                {{ form.errors.phone }}
+            </div>
+        {% endif %}
+
+        <div class="form-group">
+            <label for="{{ form.name.id_for_label }}">Имя:</label>
+            {{ form.name }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.phone.id_for_label }}">Номер телефона:</label>
+            {{ form.phone }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.email.id_for_label }}">Email:</label>
+            {{ form.email }}
+        </div>
+        <button type="submit">Отправить</button>
+    </form>
+</div>
+{% endblock %}

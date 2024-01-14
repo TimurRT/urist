@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% block title %}Юридические услуги{% endblock %}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Your common CSS files or styles can go here -->
+
+    <style type="text/css">
+        @media (min-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+        }
+        .container {
+            max-width: 960px;
+        }
+        .pricing-header {
+            max-width: 700px;
+        }
+        .card-deck .card {
+            min-width: 220px;
+        }
+        /* Прилипающий header */
+        #main-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white; /* добавлено для белого фона */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main-nav" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal">
+        </h5>
+        <nav class="my-2 my-md-0 mr-md-3 text-center">
+            <a class="p-2 text-dark" href="{% url 'home' %}">Главная</a> |
+            <a class="p-2 text-dark" href="{% url 'uslugi' %}">Услуги</a> |
+            <a class="p-2 text-dark" href="{% url 'prices' %}">Цены</a> |
+            <a class="p-2 text-dark" href="{% url 'user_form' %}">Оставить заявку</a> |
+            <a class="p-2 text-dark" href="{% url 'onas' %}">О нас</a>
+
+        </nav>
+    </div>
+
+    <!-- Your content goes here -->
+
+    <!-- Your common JavaScript files or scripts can go here -->
+
+</body>
+
+</html>
